@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3A284BAB26263CB600687A37 /* Maysuculas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Maysuculas.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A284BAB26263CB600687A37 /* Mayusculas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mayusculas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A284BAE26263CB600687A37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A284BB026263CB600687A37 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		3A284BB226263CB600687A37 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,7 +48,7 @@
 		3A284BAC26263CB600687A37 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3A284BAB26263CB600687A37 /* Maysuculas.app */,
+				3A284BAB26263CB600687A37 /* Mayusculas.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,9 +70,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3A284BAA26263CB600687A37 /* Maysuculas */ = {
+		3A284BAA26263CB600687A37 /* Mayusculas */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3A284BBF26263CB700687A37 /* Build configuration list for PBXNativeTarget "Maysuculas" */;
+			buildConfigurationList = 3A284BBF26263CB700687A37 /* Build configuration list for PBXNativeTarget "Mayusculas" */;
 			buildPhases = (
 				3A284BA726263CB600687A37 /* Sources */,
 				3A284BA826263CB600687A37 /* Frameworks */,
@@ -82,9 +82,9 @@
 			);
 			dependencies = (
 			);
-			name = Maysuculas;
+			name = Mayusculas;
 			productName = Maysuculas;
-			productReference = 3A284BAB26263CB600687A37 /* Maysuculas.app */;
+			productReference = 3A284BAB26263CB600687A37 /* Mayusculas.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -101,7 +101,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3A284BA626263CB600687A37 /* Build configuration list for PBXProject "Maysuculas" */;
+			buildConfigurationList = 3A284BA626263CB600687A37 /* Build configuration list for PBXProject "Mayusculas" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -114,7 +114,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3A284BAA26263CB600687A37 /* Maysuculas */,
+				3A284BAA26263CB600687A37 /* Mayusculas */,
 			);
 		};
 /* End PBXProject section */
@@ -320,7 +320,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3A284BA626263CB600687A37 /* Build configuration list for PBXProject "Maysuculas" */ = {
+		3A284BA626263CB600687A37 /* Build configuration list for PBXProject "Mayusculas" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3A284BBD26263CB700687A37 /* Debug */,
@@ -329,7 +329,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3A284BBF26263CB700687A37 /* Build configuration list for PBXNativeTarget "Maysuculas" */ = {
+		3A284BBF26263CB700687A37 /* Build configuration list for PBXNativeTarget "Mayusculas" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3A284BC026263CB700687A37 /* Debug */,
