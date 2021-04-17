@@ -29,6 +29,9 @@
                                                         <rect key="frame" x="20.333333333333329" y="0.0" width="50" height="51"/>
                                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
                                                         <state key="normal" image="BAmarillo"/>
+                                                        <connections>
+                                                            <segue destination="WXR-50-H4L" kind="show" id="d2e-rb-y6F"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Informacion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Efi-c7-uM8">
                                                         <rect key="frame" x="0.0" y="59.000000000000007" width="90.333333333333329" height="20.333333333333336"/>
@@ -182,6 +185,51 @@
                 </tableViewController>
             </objects>
             <point key="canvasLocation" x="3235" y="134"/>
+        </scene>
+        <!--Reglas-->
+        <scene sceneID="aGA-gG-Y2F">
+            <objects>
+                <tableViewController id="WXR-50-H4L" customClass="ReglasTableViewController" customModule="Mayusculas" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="6Ce-kE-jni">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="regla" textLabel="wpG-s0-aVF" detailTextLabel="XKe-XZ-4WU" rowHeight="198" style="IBUITableViewCellStyleSubtitle" id="jgP-co-P4I">
+                                <rect key="frame" x="0.0" y="28" width="390" height="198"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jgP-co-P4I" id="E0n-Bt-GqP">
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="198"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wpG-s0-aVF">
+                                            <rect key="frame" x="20" y="79" width="33" height="20.333333333333332"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XKe-XZ-4WU">
+                                            <rect key="frame" x="19.999999999999996" y="102.33333333333333" width="43.666666666666664" height="14.333333333333334"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="WXR-50-H4L" id="5GD-2k-dfN"/>
+                            <outlet property="delegate" destination="WXR-50-H4L" id="jAe-ex-htp"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Reglas" id="gYS-pj-BPh"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JMq-2B-JML" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3233.8461538461538" y="-554.50236966824639"/>
         </scene>
         <!--Fuentes-->
         <scene sceneID="IiF-bk-AeY">

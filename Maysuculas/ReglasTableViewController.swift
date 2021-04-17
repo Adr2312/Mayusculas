@@ -1,5 +1,5 @@
 //
-//  FuentesTableViewController.swift
+//  ReglasTableViewController.swift
 //  Mayusculas
 //
 //  Created by Javier Adrian Villa Leon on 17/04/21.
@@ -7,13 +7,17 @@
 
 import UIKit
 
-class FuentesTableViewController: UITableViewController {
-    var listaFuentes = [
-        Fuentes(nombre: "RAE", ayuda: "Uso de Mayuscúlas", link: "https://www.rae.es/dpd/mayúsculas"),
-        Fuentes(nombre: "Celeberrima", ayuda: "Reglas para el uso de mayúsculas", link: "https://gramatica.celeberrima.com/reglas-de-ortografia-para-el-uso-adecuado-de-las-mayusculas"),
-        Fuentes(nombre: "Un Profesor", ayuda: "Uso de | Reglas y ejemplos", link: "https://www.unprofesor.com/lengua-espanola/uso-de-mayusculas-reglas-y-ejemplos-1672.html"),
-        Fuentes(nombre: "Academia Mexicana de la Lengua", ayuda: "Uso de mayúsculas en titulos", link: "http://www.academia.org.mx/espin/respuestas/item/uso-de-mayusculas-en-los-titulos")
+class ReglasTableViewController: UITableViewController {
+
+    var listaReglas = [
+        Reglas(ejemplo: "¡No es increíble! Salió ileso.", regla: "Cuando se inicia un escrito y después de punto, después de los signos de interrogación o admiración, si con ellos se terminó la frase."),
+        Reglas(ejemplo: "Las aventuras del ingenioso hidalgo don Quijote de la Mancha", regla: "Es aceptable escribir sólo con mayúscula la letra inicial de las obras artísticas."),
+        Reglas(ejemplo: "Jesús dijo: La verdad os hará libres", regla: "Cuando se cita después de dos puntos"),
+        Reglas(ejemplo: "Lic., Dr., Profr., Mtro., I.M.S.S., SEP.", regla: "Va mayúscula en las abreviaturas y siglas.")
     ]
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,28 +33,25 @@ class FuentesTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return listaFuentes.count
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 1
+        return listaReglas.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "fuente",  for: indexPath) as! FuentesTableViewCell
-        cell.lNombre.text = listaFuentes[indexPath.row].nombre
-        cell.lAyuda.text = listaFuentes[indexPath.row].ayuda
-        cell.lLink.text = listaFuentes[indexPath.row].link
+        let cell = tableView.dequeueReusableCell(withIdentifier: "regla", for: indexPath)
+
+        cell.textLabel?.text = listaReglas[indexPath.row].ejemplo
+        cell.detailTextLabel?.text = listaReglas[indexPath.row].regla
 
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 143
-    }
-    
+
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
