@@ -20,6 +20,8 @@
 		3A7C3532262B4CAA006C0BC1 /* FuentesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7C3531262B4CAA006C0BC1 /* FuentesTableViewCell.swift */; };
 		3A7C3535262B9070006C0BC1 /* ReglasTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7C3534262B9070006C0BC1 /* ReglasTableViewController.swift */; };
 		3A7C3538262B908A006C0BC1 /* Reglas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7C3537262B908A006C0BC1 /* Reglas.swift */; };
+		3A7C353B262B951A006C0BC1 /* Notas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7C353A262B951A006C0BC1 /* Notas.swift */; };
+		3A7C353E262B952E006C0BC1 /* NotasTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7C353D262B952E006C0BC1 /* NotasTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		3A7C3531262B4CAA006C0BC1 /* FuentesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuentesTableViewCell.swift; sourceTree = "<group>"; };
 		3A7C3534262B9070006C0BC1 /* ReglasTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReglasTableViewController.swift; sourceTree = "<group>"; };
 		3A7C3537262B908A006C0BC1 /* Reglas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reglas.swift; sourceTree = "<group>"; };
+		3A7C353A262B951A006C0BC1 /* Notas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notas.swift; sourceTree = "<group>"; };
+		3A7C353D262B952E006C0BC1 /* NotasTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotasTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +78,8 @@
 				3A284BB026263CB600687A37 /* SceneDelegate.swift */,
 				3A284BB226263CB600687A37 /* ViewController.swift */,
 				3A284BB426263CB600687A37 /* Main.storyboard */,
+				3A7C353D262B952E006C0BC1 /* NotasTableViewController.swift */,
+				3A7C353A262B951A006C0BC1 /* Notas.swift */,
 				3A7C3534262B9070006C0BC1 /* ReglasTableViewController.swift */,
 				3A7C3537262B908A006C0BC1 /* Reglas.swift */,
 				3A7C3531262B4CAA006C0BC1 /* FuentesTableViewCell.swift */,
@@ -159,12 +165,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A284BB326263CB600687A37 /* ViewController.swift in Sources */,
+				3A7C353E262B952E006C0BC1 /* NotasTableViewController.swift in Sources */,
 				3A7C3535262B9070006C0BC1 /* ReglasTableViewController.swift in Sources */,
 				3A7C352F262B4907006C0BC1 /* FuentesTableViewController.swift in Sources */,
 				3A7C3532262B4CAA006C0BC1 /* FuentesTableViewCell.swift in Sources */,
 				3A284BAF26263CB600687A37 /* AppDelegate.swift in Sources */,
 				3A7C3521262B3AC5006C0BC1 /* JuegosTableViewController.swift in Sources */,
 				3A284BB126263CB600687A37 /* SceneDelegate.swift in Sources */,
+				3A7C353B262B951A006C0BC1 /* Notas.swift in Sources */,
 				3A7C352C262B487C006C0BC1 /* Fuentes.swift in Sources */,
 				3A7C3529262B411C006C0BC1 /* Juegos.swift in Sources */,
 				3A7C3538262B908A006C0BC1 /* Reglas.swift in Sources */,
