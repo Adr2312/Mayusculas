@@ -48,7 +48,7 @@ class FuentesTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 143
+        return 172
     }
     
     /*
