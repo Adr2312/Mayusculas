@@ -39,15 +39,19 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="BIp-OQ-vkZ">
-                                                <rect key="frame" x="163.33333333333334" y="0.0" width="61" height="79.333333333333329"/>
+                                                <rect key="frame" x="166.33333333333334" y="0.0" width="50" height="79.333333333333329"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kHT-Np-q9h">
-                                                        <rect key="frame" x="0.0" y="0.0" width="61" height="50"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
                                                         <state key="normal" image="BRojo"/>
+                                                        <connections>
+                                                            <action selector="BJuegos:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GZC-Tc-NVY"/>
+                                                            <segue destination="jz0-jn-LX1" kind="show" id="qPt-j0-kAr"/>
+                                                        </connections>
                                                     </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fuentes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qHu-mb-ewJ">
-                                                        <rect key="frame" x="0.0" y="59.000000000000007" width="61" height="20.333333333333336"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jugar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qHu-mb-ewJ">
+                                                        <rect key="frame" x="0.0" y="59.000000000000007" width="50" height="20.333333333333336"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -55,19 +59,18 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="Akr-LE-a0u">
-                                                <rect key="frame" x="317.66666666666669" y="0.0" width="50" height="79.333333333333329"/>
+                                                <rect key="frame" x="306.66666666666669" y="0.0" width="61" height="79.333333333333329"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="szN-f3-Yq2">
-                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="61" height="50"/>
                                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
                                                         <state key="normal" image="BAzul"/>
                                                         <connections>
-                                                            <action selector="BJuegos:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kja-8m-FUT"/>
-                                                            <segue destination="jz0-jn-LX1" kind="show" id="CsE-8w-55V"/>
+                                                            <segue destination="Kun-lR-6Dw" kind="show" id="Uul-fP-mPD"/>
                                                         </connections>
                                                     </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jugar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SHe-3P-Rbc">
-                                                        <rect key="frame" x="0.0" y="59.000000000000007" width="50" height="20.333333333333336"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fuentes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SHe-3P-Rbc">
+                                                        <rect key="frame" x="0.0" y="59.000000000000007" width="61" height="20.333333333333336"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -178,7 +181,64 @@
                     <navigationItem key="navigationItem" title="Title" id="xHF-bK-58w"/>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="2882" y="872"/>
+            <point key="canvasLocation" x="3235" y="134"/>
+        </scene>
+        <!--Fuentes-->
+        <scene sceneID="IiF-bk-AeY">
+            <objects>
+                <tableViewController id="Kun-lR-6Dw" customClass="FuentesTableViewController" customModule="Mayusculas" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="zNk-Oo-l46">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="fuente" rowHeight="143" id="SNe-Yh-dRy" customClass="FuentesTableViewCell" customModule="Mayusculas" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="390" height="143"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SNe-Yh-dRy" id="I45-1z-v7P">
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="143"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uKN-as-0sT">
+                                            <rect key="frame" x="20" y="11" width="350" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Za5-mx-wF7">
+                                            <rect key="frame" x="20" y="61" width="350" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="characterWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CFT-fj-5Co">
+                                            <rect key="frame" x="20" y="111" width="350" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="lAyuda" destination="Za5-mx-wF7" id="779-y0-mFp"/>
+                                    <outlet property="lLink" destination="CFT-fj-5Co" id="Cjv-dt-gxA"/>
+                                    <outlet property="lNombre" destination="uKN-as-0sT" id="y6I-he-hLO"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Kun-lR-6Dw" id="3og-86-92q"/>
+                            <outlet property="delegate" destination="Kun-lR-6Dw" id="dkO-rD-IBt"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Fuentes" id="ydq-lS-xiI"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DEB-kd-ciL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3233.8461538461538" y="870.85308056872032"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jFE-Ex-MKs">
