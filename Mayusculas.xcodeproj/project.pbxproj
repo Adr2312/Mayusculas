@@ -13,6 +13,8 @@
 		3A284BB626263CB600687A37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A284BB426263CB600687A37 /* Main.storyboard */; };
 		3A284BB826263CB700687A37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A284BB726263CB700687A37 /* Assets.xcassets */; };
 		3A284BBB26263CB700687A37 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A284BB926263CB700687A37 /* LaunchScreen.storyboard */; };
+		3A7C3521262B3AC5006C0BC1 /* JuegosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7C3520262B3AC5006C0BC1 /* JuegosTableViewController.swift */; };
+		3A7C3529262B411C006C0BC1 /* Juegos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7C3528262B411C006C0BC1 /* Juegos.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		3A284BB726263CB700687A37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A284BBA26263CB700687A37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A284BBC26263CB700687A37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A7C3520262B3AC5006C0BC1 /* JuegosTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuegosTableViewController.swift; sourceTree = "<group>"; };
+		3A7C3528262B411C006C0BC1 /* Juegos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Juegos.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				3A284BB026263CB600687A37 /* SceneDelegate.swift */,
 				3A284BB226263CB600687A37 /* ViewController.swift */,
 				3A284BB426263CB600687A37 /* Main.storyboard */,
+				3A7C3528262B411C006C0BC1 /* Juegos.swift */,
+				3A7C3520262B3AC5006C0BC1 /* JuegosTableViewController.swift */,
 				3A284BB726263CB700687A37 /* Assets.xcassets */,
 				3A284BB926263CB700687A37 /* LaunchScreen.storyboard */,
 				3A284BBC26263CB700687A37 /* Info.plist */,
@@ -139,7 +145,9 @@
 			files = (
 				3A284BB326263CB600687A37 /* ViewController.swift in Sources */,
 				3A284BAF26263CB600687A37 /* AppDelegate.swift in Sources */,
+				3A7C3521262B3AC5006C0BC1 /* JuegosTableViewController.swift in Sources */,
 				3A284BB126263CB600687A37 /* SceneDelegate.swift in Sources */,
+				3A7C3529262B411C006C0BC1 /* Juegos.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
