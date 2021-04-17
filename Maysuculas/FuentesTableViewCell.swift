@@ -12,6 +12,8 @@ class FuentesTableViewCell: UITableViewCell {
     @IBOutlet weak var lNombre: UILabel!
     @IBOutlet weak var lAyuda: UILabel!
     @IBOutlet weak var lLink: UILabel!
+    @IBOutlet weak var BEnlace: UIButton!
+    
     
     
     override func awakeFromNib() {
@@ -26,4 +28,9 @@ class FuentesTableViewCell: UITableViewCell {
         
     }
 
+    @IBAction func irEnlace(_ sender: Any) {
+        var Enlace :String = lLink.text!
+        print(Enlace)
+        UIApplication.shared.open(URL(string: Enlace)! as URL, options: [:], completionHandler: nil)
+    }
 }

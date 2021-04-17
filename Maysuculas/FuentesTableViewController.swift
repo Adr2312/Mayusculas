@@ -8,6 +8,9 @@
 import UIKit
 
 class FuentesTableViewController: UITableViewController {
+    
+    
+    
     var listaFuentes = [
         Fuentes(nombre: "RAE", ayuda: "Uso de Mayuscúlas", link: "https://www.rae.es/dpd/mayúsculas"),
         Fuentes(nombre: "Celeberrima", ayuda: "Reglas para el uso de mayúsculas", link: "https://gramatica.celeberrima.com/reglas-de-ortografia-para-el-uso-adecuado-de-las-mayusculas"),
@@ -40,16 +43,20 @@ class FuentesTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "fuente",  for: indexPath) as! FuentesTableViewCell
+        var Enlace = listaFuentes[indexPath.row].link
         cell.lNombre.text = listaFuentes[indexPath.row].nombre
         cell.lAyuda.text = listaFuentes[indexPath.row].ayuda
         cell.lLink.text = listaFuentes[indexPath.row].link
+        cell.BEnlace.setTitle(Enlace, for: .normal)
+        
 
         return cell
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 172
+        return 300
     }
+    
     
     /*
     // Override to support conditional editing of the table view.
