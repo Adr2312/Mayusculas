@@ -51,7 +51,15 @@ class ReglasTableViewController: UITableViewController {
         return cell
     }
     
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "verRegla"{
+            let vistaRegla = segue.destination as! VerReglaViewController
+            let indice = tableView.indexPathForSelectedRow
+            vistaRegla.unaRegla = listaReglas[indice!.row]
+        }
+        
+    }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
