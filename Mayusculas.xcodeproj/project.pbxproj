@@ -13,6 +13,8 @@
 		3A284BB626263CB600687A37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A284BB426263CB600687A37 /* Main.storyboard */; };
 		3A284BB826263CB700687A37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A284BB726263CB700687A37 /* Assets.xcassets */; };
 		3A284BBB26263CB700687A37 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A284BB926263CB700687A37 /* LaunchScreen.storyboard */; };
+		3A78D191262BABB800909BAE /* AgregarNotaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A78D190262BABB800909BAE /* AgregarNotaViewController.swift */; };
+		3A78D194262BABC500909BAE /* VerNotaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A78D193262BABC500909BAE /* VerNotaViewController.swift */; };
 		3A7C3521262B3AC5006C0BC1 /* JuegosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7C3520262B3AC5006C0BC1 /* JuegosTableViewController.swift */; };
 		3A7C3529262B411C006C0BC1 /* Juegos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7C3528262B411C006C0BC1 /* Juegos.swift */; };
 		3A7C352C262B487C006C0BC1 /* Fuentes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7C352B262B487C006C0BC1 /* Fuentes.swift */; };
@@ -33,6 +35,8 @@
 		3A284BB726263CB700687A37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A284BBA26263CB700687A37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A284BBC26263CB700687A37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A78D190262BABB800909BAE /* AgregarNotaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgregarNotaViewController.swift; sourceTree = "<group>"; };
+		3A78D193262BABC500909BAE /* VerNotaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerNotaViewController.swift; sourceTree = "<group>"; };
 		3A7C3520262B3AC5006C0BC1 /* JuegosTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuegosTableViewController.swift; sourceTree = "<group>"; };
 		3A7C3528262B411C006C0BC1 /* Juegos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Juegos.swift; sourceTree = "<group>"; };
 		3A7C352B262B487C006C0BC1 /* Fuentes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fuentes.swift; sourceTree = "<group>"; };
@@ -78,6 +82,8 @@
 				3A284BB026263CB600687A37 /* SceneDelegate.swift */,
 				3A284BB226263CB600687A37 /* ViewController.swift */,
 				3A284BB426263CB600687A37 /* Main.storyboard */,
+				3A78D190262BABB800909BAE /* AgregarNotaViewController.swift */,
+				3A78D193262BABC500909BAE /* VerNotaViewController.swift */,
 				3A7C353D262B952E006C0BC1 /* NotasTableViewController.swift */,
 				3A7C353A262B951A006C0BC1 /* Notas.swift */,
 				3A7C3534262B9070006C0BC1 /* ReglasTableViewController.swift */,
@@ -169,12 +175,14 @@
 				3A7C3535262B9070006C0BC1 /* ReglasTableViewController.swift in Sources */,
 				3A7C352F262B4907006C0BC1 /* FuentesTableViewController.swift in Sources */,
 				3A7C3532262B4CAA006C0BC1 /* FuentesTableViewCell.swift in Sources */,
+				3A78D191262BABB800909BAE /* AgregarNotaViewController.swift in Sources */,
 				3A284BAF26263CB600687A37 /* AppDelegate.swift in Sources */,
 				3A7C3521262B3AC5006C0BC1 /* JuegosTableViewController.swift in Sources */,
 				3A284BB126263CB600687A37 /* SceneDelegate.swift in Sources */,
 				3A7C353B262B951A006C0BC1 /* Notas.swift in Sources */,
 				3A7C352C262B487C006C0BC1 /* Fuentes.swift in Sources */,
 				3A7C3529262B411C006C0BC1 /* Juegos.swift in Sources */,
+				3A78D194262BABC500909BAE /* VerNotaViewController.swift in Sources */,
 				3A7C3538262B908A006C0BC1 /* Reglas.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

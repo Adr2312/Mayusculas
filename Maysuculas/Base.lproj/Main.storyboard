@@ -226,6 +226,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="qLr-bv-pwh" kind="show" identifier="verNota" id="K18-Jv-JPT"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -236,7 +239,7 @@
                     <navigationItem key="navigationItem" title="Notas" id="0FR-BH-5dZ">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="rl1-vw-r9E">
                             <connections>
-                                <segue destination="l9r-Dj-g7M" kind="presentation" id="dfM-wj-cxK"/>
+                                <segue destination="l9r-Dj-g7M" kind="presentation" identifier="agregarNota" id="dfM-wj-cxK"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -245,10 +248,40 @@
             </objects>
             <point key="canvasLocation" x="2060" y="-630.56872037914684"/>
         </scene>
-        <!--View Controller-->
+        <!--Ver Nota View Controller-->
+        <scene sceneID="6n4-ho-pf9">
+            <objects>
+                <viewController id="qLr-bv-pwh" customClass="VerNotaViewController" customModule="Mayusculas" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iKO-af-x3j">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="PMO-oq-l0Q">
+                                <rect key="frame" x="16" y="88" width="358" height="668"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6FO-pv-JQX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Kyi-36-jhA"/>
+                    <connections>
+                        <outlet property="nNota" destination="PMO-oq-l0Q" id="yxc-rM-9M1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aRJ-EY-OZj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3176.9230769230767" y="-631.27962085308059"/>
+        </scene>
+        <!--Agregar Nota View Controller-->
         <scene sceneID="TBh-2D-tIs">
             <objects>
-                <viewController id="l9r-Dj-g7M" sceneMemberID="viewController">
+                <viewController id="l9r-Dj-g7M" customClass="AgregarNotaViewController" customModule="Mayusculas" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nS3-Ec-z8y">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -282,15 +315,28 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q27-yK-XBd">
+                                <rect key="frame" x="163" y="603" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="63d-iD-opq" kind="unwind" unwindAction="unwindFor:" id="1ng-mb-Brp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1iI-ml-uaM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="vPR-Oz-0o0"/>
+                    <connections>
+                        <outlet property="tNota" destination="uAB-a0-jSL" id="IFF-UW-SwK"/>
+                        <outlet property="tTitulo" destination="rnh-bX-SOZ" id="SVW-IC-DUW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bDS-RK-mZd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="63d-iD-opq" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3207.6923076923076" y="-631.27962085308059"/>
+            <point key="canvasLocation" x="3176.9230769230767" y="-1378.4360189573458"/>
         </scene>
         <!--Reglas-->
         <scene sceneID="aGA-gG-Y2F">

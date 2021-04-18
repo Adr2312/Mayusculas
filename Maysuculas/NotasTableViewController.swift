@@ -8,7 +8,7 @@
 import UIKit
 
 class NotasTableViewController: UITableViewController {
-    
+    var nNota = Notas(nombre: "", nota: "")
     var listaNotas = [
         Notas(nombre: "Nota 1", nota: "Greetings. I am writing because I discovered a way to improve the taste of decaffeinated"),
         Notas(nombre: "Nota 2", nota: "Greetings. I am writing because I discovered a way to improve the taste of decaffeinated"),
@@ -48,7 +48,19 @@ class NotasTableViewController: UITableViewController {
         return cell
     }
     
+    @IBAction func unwind(for unwindSegue: UIStoryboardSegue) {
+        listaNotas.append(nNota)
+        tableView.reloadData()
+    }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier != "agregarNota"{
+            let vistaNota = segue.destination as! VerNotaViewController
+            let indice = tableView.indexPathForSelectedRow
+            vistaNota.unaNota = listaNotas[indice!.row]
+        }
+        
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
