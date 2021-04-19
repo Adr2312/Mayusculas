@@ -14,6 +14,5 @@ class Notas: NSObject {
     init(nombre: String, nota: String){
         self.nombre = nombre
         self.nota = nota
-        
     }
 }
