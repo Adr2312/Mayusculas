@@ -7,9 +7,11 @@
 
 import UIKit
 
-class NotasTableViewController: UITableViewController, UISearchBarDelegate {
+class NotasTableViewController: UITableViewController, UISearchBarDelegate{
+ 
     
-    @IBOutlet weak var searchBAr: UISearchBar!
+    
+    var searchController = UISearchController(searchResultsController: nil)
     
     var nNota = Notas(nombre: "", nota: "")
     var listaNotas = [
@@ -28,7 +30,9 @@ class NotasTableViewController: UITableViewController, UISearchBarDelegate {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        searchBAr.delegate = self
+        searchController.searchBar.delegate = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        navigationItem.searchController = searchController
         filteredData = listaNotas
     }
 
@@ -102,6 +106,14 @@ class NotasTableViewController: UITableViewController, UISearchBarDelegate {
             self.tableView.reloadData()
         }
     }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchController.isActive = false
+        filteredData = listaNotas
+        self.tableView.reloadData()
+    }
+    
+
     
     /*
     // Override to support rearranging the table view.

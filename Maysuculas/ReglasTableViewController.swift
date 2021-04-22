@@ -7,7 +7,8 @@
 
 import UIKit
 
-class ReglasTableViewController: UITableViewController {
+class ReglasTableViewController: UITableViewController, UISearchBarDelegate {
+    var searchController = UISearchController(searchResultsController: nil)
 
     var listaReglas = [
         Reglas(ejemplo: "¡No es increíble! Salió ileso.", regla: "Cuando se inicia un escrito y después de punto, después de los signos de interrogación o admiración, si con ellos se terminó la frase."),
@@ -16,7 +17,7 @@ class ReglasTableViewController: UITableViewController {
         Reglas(ejemplo: "Lic., Dr., Profr., Mtro., I.M.S.S., SEP.", regla: "Va mayúscula en las abreviaturas y siglas.")
     ]
     
-    
+    var filteredData : [Reglas]!
     
     
     override func viewDidLoad() {
@@ -27,6 +28,10 @@ class ReglasTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        searchController.searchBar.delegate = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        navigationItem.searchController = searchController
+        filteredData = listaReglas
     }
 
     // MARK: - Table view data source
@@ -38,7 +43,7 @@ class ReglasTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return listaReglas.count
+        return filteredData.count
     }
 
     
@@ -58,6 +63,28 @@ class ReglasTableViewController: UITableViewController {
             vistaRegla.unaRegla = listaReglas[indice!.row]
         }
         
+    }
+    
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        filteredData = []
+        
+        if searchText.count == 0{
+            filteredData = listaReglas
+        }else{
+            for reglas in listaReglas {
+                if reglas.regla.lowercased().contains(searchText.lowercased()) || reglas.ejemplo.lowercased().contains(searchText.lowercased()){
+                    filteredData.append(reglas)
+                }
+            }
+            self.tableView.reloadData()
+        }
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchController.isActive = false
+        filteredData = listaReglas
+        self.tableView.reloadData()
     }
     
     /*
