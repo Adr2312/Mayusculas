@@ -7,7 +7,10 @@
 
 import UIKit
 
-class NotasTableViewController: UITableViewController {
+class NotasTableViewController: UITableViewController, UISearchBarDelegate {
+    
+    @IBOutlet weak var searchBAr: UISearchBar!
+    
     var nNota = Notas(nombre: "", nota: "")
     var listaNotas = [
         Notas(nombre: "Nota 1", nota: "Greetings. I am writing because I discovered a way to improve the taste of decaffeinated"),
@@ -15,7 +18,8 @@ class NotasTableViewController: UITableViewController {
         Notas(nombre: "Nota 3", nota: "Greetings. I am writing because I discovered a way to improve the taste of decaffeinated"),
         Notas(nombre: "Nota 4", nota: "Greetings. I am writing because I discovered a way to improve the taste of decaffeinated")
     ]
-
+    var filteredData : [Notas]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,6 +28,8 @@ class NotasTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        searchBAr.delegate = self
+        filteredData = listaNotas
     }
 
     // MARK: - Table view data source
@@ -35,7 +41,7 @@ class NotasTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return listaNotas.count
+        return filteredData.count
     }
 
     
@@ -50,6 +56,7 @@ class NotasTableViewController: UITableViewController {
     
     @IBAction func unwind(for unwindSegue: UIStoryboardSegue) {
         listaNotas.append(nNota)
+        filteredData = listaNotas
         tableView.reloadData()
     }
 
@@ -81,7 +88,21 @@ class NotasTableViewController: UITableViewController {
         }    
     }
     
-
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        filteredData = []
+        
+        if searchText == ""{
+            filteredData = listaNotas
+        }else{
+            for notas in listaNotas {
+                if notas.nombre.lowercased().contains(searchText.lowercased()) || notas.nota.lowercased().contains(searchText.lowercased()){
+                    filteredData.append(notas)
+                }
+            }
+            self.tableView.reloadData()
+        }
+    }
+    
     /*
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
